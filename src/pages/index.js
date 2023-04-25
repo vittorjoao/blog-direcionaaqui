@@ -2,13 +2,12 @@ export default function Home() {
   return (
     <main className="container h-screen mx-auto px-32 font-sans">
       <div className="flex flex-row gap-4 pt-12">
-        <div className="flex flex-row items-center gap-2 basis-1/12 p-1">
-          <div className="bg-[#4B5563] w-9 h-9 p-1 text-center align-middle font-semibold shadow-md hover:scale-125 cursor-pointer">
-            <a href="/">DA</a>
-          </div>
-          <span className="text-center font-semibold">Blog</span>
+        <div className="flex flex-row items-center gap-2 basis-2/12 p-1">
+          <span className="text-center font-semibold">
+            Blog Direciona Aqui!
+          </span>
         </div>
-        <div className="flex flex-row items-center justify-start gap-16 basis-8/12 py-1 px-8">
+        <div className="flex flex-row items-center justify-start gap-16 basis-6/12 py-1 px-8">
           <div className="p-1">
             <a href="/">Link 1</a>
           </div>
@@ -26,11 +25,11 @@ export default function Home() {
           <input
             type="text"
             placeholder="Buscar"
-            className="bg-[#1F2937] py-1 px-6 rounded-[100px] h-10 w-80"
+            className="bg-[#1F2937] py-1 px-6 rounded-[100px] h-10 w-full"
           />
         </div>
       </div>
-      <div className="flex flex-row gap-4 mt-12 h-96">
+      <div className="flex flex-row gap-4 mt-12 h-96 cursor-pointer hover:scale-105 transform transition duration-500">
         <img
           src="https://fastly.picsum.photos/id/122/4147/2756.jpg?hmac=-B_1uAvYufznhjeA9xSSAJjqt07XrVzDWCf5VDNX0pQ"
           alt="teste"
@@ -43,7 +42,7 @@ export default function Home() {
           <span className="font-semibold text-lg">
             Título aleatório do post sobre alguma coisa aleatória
           </span>
-          <span className="font-light text-sm text-gray-400">
+          <span className="text-sm text-gray-400">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -52,13 +51,15 @@ export default function Home() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </span>
-          <div className="flex flex-row gap-4 mt-3">
-            <div className="aqua w-12 h-12 rounded-full text-center">
-              avatar
-            </div>
-            <div className="flex flex-col">
-              <span className="font-normal">Jack Bundao</span>
-              <span className="font-thin font-xs">Desenvolvedor</span>
+          <div className="flex flex-row gap-1 mt-3">
+            <img
+              src="https://i.pravatar.cc/300"
+              alt="autor"
+              className="shadow-md w-12 h-12 rounded-full"
+            />
+            <div className="flex flex-col justify-center">
+              <span className="text-sm">Jack Bundao</span>
+              <span className="text-xs text-gray-400">Desenvolvedor</span>
             </div>
           </div>
         </div>
