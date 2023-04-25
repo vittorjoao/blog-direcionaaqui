@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -33,7 +32,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-row gap-4 mt-12 h-96 cursor-pointer hover:scale-105 transform transition duration-500">
-        <Image
+        <img
           src="https://fastly.picsum.photos/id/122/4147/2756.jpg?hmac=-B_1uAvYufznhjeA9xSSAJjqt07XrVzDWCf5VDNX0pQ"
           alt="post destaque"
           className="rounded-xl"
