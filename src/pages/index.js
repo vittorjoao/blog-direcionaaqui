@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="container h-screen mx-auto px-32 font-sans">
@@ -9,16 +12,16 @@ export default function Home() {
         </div>
         <div className="flex flex-row items-center justify-start gap-16 basis-6/12 py-1 px-8">
           <div className="p-1">
-            <a href="/">Link 1</a>
+            <Link href="/">Link 1</Link>
           </div>
           <div className="p-1">
-            <a href="/">Link 2</a>
+            <Link href="/">Link 2</Link>
           </div>
           <div className="p-1">
-            <a href="/">Link 3</a>
+            <Link href="/">Link 3</Link>
           </div>
           <div className="font p-1">
-            <a href="/">Link 4</a>
+            <Link href="/">Link 4</Link>
           </div>
         </div>
         <div className="flex flex-row items-center justify-center basis-3/12 p-1">
@@ -30,9 +33,9 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-row gap-4 mt-12 h-96 cursor-pointer hover:scale-105 transform transition duration-500">
-        <img
+        <Image
           src="https://fastly.picsum.photos/id/122/4147/2756.jpg?hmac=-B_1uAvYufznhjeA9xSSAJjqt07XrVzDWCf5VDNX0pQ"
-          alt="teste"
+          alt="post destaque"
           className="rounded-xl"
         />
         <div className="flex flex-col justify-center gap-3 py-4 px-2 w-full">
