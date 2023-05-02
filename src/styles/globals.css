@@ -2,44 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 55, 65, 81;
-  --background-end-rgb: 17, 24, 39;
-  --whiteop: rgba(255, 255, 255, 0.6);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 55, 65, 81;
-    --background-end-rgb: 17, 24, 39;
+@layer base {
+  #__next {
+    @apply contents;
   }
-}
 
-html {
-  height: 100%;
-}
+  html {
+    @apply h-full scroll-smooth antialiased;
+  }
 
-body {
-  margin: 0;
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+  body {
+    @apply flex h-full flex-col;
+  }
 
-.orange {
-  background-color: orange;
-}
+  main {
+    @apply grow;
+  }
 
-.purple {
-  background-color: purple;
-}
+  .section {
+    @apply py-24;
+  }
 
-.aqua {
-  background-color: aqua;
+  .container {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .title {
+    @apply font-bold tracking-tight;
+  }
+
+  .orange {
+    background-color: orange;
+  }
+
+  .purple {
+    background-color: purple;
+  }
+
+  .aqua {
+    background-color: aqua;
+  }
 }
