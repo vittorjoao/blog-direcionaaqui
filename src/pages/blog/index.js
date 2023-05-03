@@ -1,5 +1,5 @@
-import PostCard from "@/components/posts/postcard";
-import client from "../../../lib/contentful";
+import PostCard from "@/components/blog/postcard";
+import { client } from "@/lib/contentful";
 
 export default function Posts({ posts }) {
   return (

@@ -7,8 +7,8 @@ export default function PostCard({ post }) {
   const { title, slug, excerpt, coverImage, author, date } = post.fields;
 
   return (
-    <li className="rounded-md overflow-hidden shadow-md bg-white dark:bg-gray-900">
-      <Link href={`/posts/${slug}`} aria-label={title}>
+    <li className="rounded-md overflow-hidden shadow-md bg-white dark:bg-gray-900 md:hover:scale-105 transition duration-500">
+      <Link href={`/blog/${slug}`} aria-label={title}>
         <div className="mb-2">
           <ContentfulImage
             alt={`Cover image for ${title}`}
@@ -23,7 +23,11 @@ export default function PostCard({ post }) {
             <DateComponent dateString={date} />
           </div>
           <p className="text-base mb-4">{excerpt}</p>
-          <Avatar name={author.fields.name} picture={author.fields.picture} />
+          <Avatar
+            name={author.fields.name}
+            jobTitle={author.fields.jobTitle}
+            picture={author.fields.picture}
+          />
         </div>
       </Link>
     </li>

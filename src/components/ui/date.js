@@ -1,4 +1,4 @@
-import { formatDate } from "../../../lib/util";
+import { formatDate } from "../../lib/util";
 
 export default function DateComponent({ dateString, options, ...rest }) {
   return (
