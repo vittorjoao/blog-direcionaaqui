@@ -1,5 +1,6 @@
 import PostBody from "@/components/blog/postbody";
 import PostHeader from "@/components/blog/postheader";
+import PreviewAlert from "@/components/ui/previewalert";
 import Skeleton from "@/components/ui/skeleton";
 import { client, previewClient } from "@/lib/contentful";
 import { useRouter } from "next/router";
@@ -8,9 +9,9 @@ export default function Post({ post, preview }) {
   const router = useRouter();
 
   return (
-    <section className="section">
-      {/*preview && <PreviewAlert />*/}
-      <div className="container">
+    <>
+      {preview && <PreviewAlert />}
+      <section className="container">
         <article className="prose mx-auto">
           {router.isFallback ? (
             <Skeleton />
@@ -21,8 +22,8 @@ export default function Post({ post, preview }) {
             </>
           )}
         </article>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
