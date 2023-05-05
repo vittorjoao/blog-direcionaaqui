@@ -7,7 +7,7 @@ export default function PostCard({ post }) {
   const { title, slug, excerpt, coverImage, author, date } = post.fields;
 
   return (
-    <li className="rounded-md overflow-hidden shadow-md bg-white dark:bg-gray-900 md:hover:scale-105 transition duration-500">
+    <li className="rounded-md overflow-hidden shadow-md bg-white dark:bg-zinc-900 md:hover:scale-105 md:hover:transition md:hover:duration-500">
       <Link href={`/blog/${slug}`} aria-label={title}>
         <div className="mb-2">
           <ContentfulImage
@@ -22,7 +22,9 @@ export default function PostCard({ post }) {
           <div className="text-sm mb-4 text-gray-400">
             <DateComponent dateString={date} />
           </div>
-          <p className="text-base mb-4">{excerpt}</p>
+          <p className="text-base mb-4 text-zinc-900 dark:text-slate-50">
+            {excerpt}
+          </p>
           <Avatar
             name={author.fields.name}
             jobTitle={author.fields.jobTitle}

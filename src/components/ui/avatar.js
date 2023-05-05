@@ -14,7 +14,7 @@ export default function Avatar({ name, jobTitle, picture }) {
       </div>
       <div className="flex flex-col">
         <span className="font-semibold">{name}</span>
-        <span className="text-sm text-gray-500">{jobTitle}</span>
+        <span className="text-sm text-gray-400">{jobTitle}</span>
       </div>
     </div>
   );

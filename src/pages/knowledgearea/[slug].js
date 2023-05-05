@@ -4,13 +4,8 @@ import Skeleton from "@/components/ui/skeleton";
 import { client } from "@/lib/contentful";
 import { useRouter } from "next/router";
 
-const imageLoader = ({ src, width, quality }) => {
-  return `${src}?w=${width}&q=${quality || 75}`;
-};
-
 export default function Technology({ technology, courses }) {
   const router = useRouter();
-  const teste = new Date();
 
   return (
     <section className="container flex justify-center gap-4">
@@ -19,14 +14,14 @@ export default function Technology({ technology, courses }) {
       ) : (
         <>
           <article className="md:pr-8">
-            <h3 className="text-xl font-bold mb-2 leading-snug text-gray-900 dark:text-white">
+            <h3 className="text-xl font-bold mb-2 leading-snug text-zinc-900 dark:text-slate-50">
               Sobre {technology.fields.title}
             </h3>
-            <div className="mx-auto prose text-gray-900 dark:text-white">
+            <div className="mx-auto prose text-zinc-900 dark:text-slate-50">
               <RichText content={technology.fields.description} />
             </div>
             <div className="block lg:hidden pt-4 md:pt-0">
-              <h3 className="text-xl font-bold mb-2 leading-snug text-gray-900 dark:text-white">
+              <h3 className="text-xl font-bold mb-2 leading-snug text-zinc-900 dark:text-slate-50">
                 Cursos
               </h3>
               <ul className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -37,12 +32,16 @@ export default function Technology({ technology, courses }) {
             </div>
           </article>
           <div className="hidden lg:block flex-1">
-            <h3 className="text-xl font-bold mb-2 leading-snug text-gray-900 dark:text-white">
+            <h3 className="text-xl font-bold mb-2 leading-snug text-zinc-900 dark:text-slate-50">
               Cursos
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {courses.map((course) => (
-                <CourseCard key={course.sys.id} item={course} />
+                <CourseCard
+                  key={course.sys.id}
+                  item={course}
+                  source={technology.fields.slug}
+                />
               ))}
             </ul>
           </div>

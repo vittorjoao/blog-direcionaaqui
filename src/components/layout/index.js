@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Script type="text/javascript" src="/static/theme.js" />
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className="bg-white dark:bg-zinc-900 border-b border-slate-300 dark:border-zinc-800">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
           <Link href="/" className="flex items-center">
             <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
               <input
                 type="text"
                 id="search-navbar"
-                className="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block w-full p-2 pl-10 text-sm bg-slate-200 dark:bg-zinc-700 text-zinc-900 dark:text-slate-50 border border-slate-300 dark:border-zinc-800 focus:ring-slate-400 focus:border-slate-400 dark:focus:ring-zinc-600 dark:focus:border-zinc-600 rounded-lg"
                 placeholder="Buscar..."
               />
             </div>
@@ -102,15 +102,15 @@ const Layout = ({ children }) => {
               <input
                 type="text"
                 id="search-navbar"
-                className="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block w-full p-2 pl-10 text-sm bg-slate-200 dark:bg-zinc-700 text-zinc-900 dark:text-slate-50 border border-slate-300 dark:border-zinc-800 focus:ring-slate-400 focus:border-slate-400 dark:focus:ring-zinc-600 dark:focus:border-zinc-600 rounded-lg"
                 placeholder="Buscar..."
               />
             </div>
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium bg-white dark:bg-zinc-900 border border-slate-300 dark:border-gray-800 md:flex-row md:space-x-8 md:mt-0 md:border-0 rounded-lg">
               <li>
                 <Link
                   href="/"
-                  className={`block py-2 pl-3 pr-4 text-gray-900 dark:text-white md:p-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 ${
+                  className={`block py-2 pl-3 pr-4 text-zinc-900 dark:text-slate-50 md:p-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 ${
                     router.pathname === "/"
                       ? "md:text-blue-700  md:dark:text-blue-500"
                       : null
@@ -123,7 +123,7 @@ const Layout = ({ children }) => {
               <li>
                 <Link
                   href="/blog"
-                  className={`block py-2 pl-3 pr-4 text-gray-900 dark:text-white md:p-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 ${
+                  className={`block py-2 pl-3 pr-4 text-zinc-900 dark:text-slate-50 md:p-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 ${
                     String(router.pathname).includes("/blog") ||
                     router.pathname === "/blog"
                       ? "md:text-blue-700  md:dark:text-blue-500"
@@ -136,7 +136,7 @@ const Layout = ({ children }) => {
               <li>
                 <Link
                   href="/about"
-                  className={`block py-2 pl-3 pr-4 text-gray-900 dark:text-white md:p-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 ${
+                  className={`block py-2 pl-3 pr-4 text-zinc-900 dark:text-slate-50 md:p-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 ${
                     router.pathname === "/about"
                       ? "md:text-blue-700  md:dark:text-blue-500"
                       : null
@@ -148,7 +148,7 @@ const Layout = ({ children }) => {
               <li>
                 <Link
                   href="/contact"
-                  className={`block py-2 pl-3 pr-4 text-gray-900 dark:text-white md:p-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 ${
+                  className={`block py-2 pl-3 pr-4 text-zinc-900 dark:text-slate-50 md:p-0 md:hover:text-blue-700 md:dark:hover:text-blue-500 ${
                     router.pathname === "/contact"
                       ? "md:text-blue-700  md:dark:text-blue-500"
                       : null

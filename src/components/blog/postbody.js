@@ -4,7 +4,7 @@ export default function PostBody({ post }) {
   const { content } = post.fields;
 
   return (
-    <div className="mx-auto prose text-gray-900 dark:text-white">
+    <div className="mx-auto prose text-zinc-900 dark:text-slate-50">
       <RichText content={content} />
     </div>
   );

@@ -7,10 +7,10 @@ export default function PostHeader({ post }) {
 
   return (
     <>
-      <h3 className="text-xl font-bold mb-2 leading-snug text-gray-900 dark:text-white">
+      <h3 className="text-xl font-bold mb-2 leading-snug text-zinc-900 dark:text-slate-50">
         {title}
       </h3>
-      <div className="hidden md:flex md:justify-between md:items-center md:mb-10 text-gray-900 dark:text-white">
+      <div className="hidden md:flex md:justify-between md:items-center md:mb-10 text-zinc-900 dark:text-slate-50">
         <Avatar
           name={author.fields.name}
           jobTitle={author.fields.jobTitle}
@@ -26,7 +26,7 @@ export default function PostHeader({ post }) {
           height={coverImage.fields.file.details.image.height}
         />
       </div>
-      <div className="flex justify-between items-center md:hidden mb-6 text-gray-900 dark:text-white">
+      <div className="flex justify-between items-center md:hidden mb-6 text-zinc-900 dark:text-slate-50">
         <Avatar
           name={author.fields.name}
           jobTitle={author.fields.jobTitle}
