@@ -1,7 +1,19 @@
 import KnowledgeCard from "@/components/main/knowledgecard";
 import { client } from "@/lib/contentful";
 
-export default function Home({ items }) {
+async function getEntries() {
+  const response = await client.getEntries({ content_type: "technologyAreas" });
+
+  if (!response?.items) {
+    return [];
+  }
+
+  return response.items;
+}
+
+export default async function Home() {
+  const items = await getEntries();
+
   return (
     <section className="container">
       <p className="text-lg md:text-2xl font-bold pb-8 text-gray-900 dark:text-white">
@@ -15,14 +27,3 @@ export default function Home({ items }) {
     </section>
   );
 }
-
-export const getStaticProps = async () => {
-  const response = await client.getEntries({ content_type: "technologyAreas" });
-
-  return {
-    props: {
-      items: response.items,
-      revalidate: 60,
-    },
-  };
-};

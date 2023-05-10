@@ -1,13 +1,14 @@
+"use client";
 import Link from "next/link";
 import ContentfulImage from "../ui/contentfulimage";
 import Flag from "react-world-flags";
 
-export default function CourseCard({ item, source }) {
+export default function CourseCard({ item }) {
   const { title, languages, icon, slug } = item.fields;
 
   return (
     <li className="rounded-md overflow-hidden shadow-lg bg-white dark:bg-zinc-900 border border-slate-300 dark:border-zinc-800 md:hover:scale-105 md:hover:transition md:hover:duration-500">
-      <Link href={`/course/${slug}?source=${source}`}>
+      <Link href={`/course/${slug}`}>
         <div className="relative w-full h-36 text-gray-900 bg-slate-400 dark:bg-zinc-800 border border-slate-300 dark:border-zinc-800">
           <ContentfulImage
             alt={`Icon image for ${title}`}
